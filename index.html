@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Mars Rover</title>
+
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <h1 class="text-white">Mars Rover Navigation System</h1>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 data-container">
+
+                    <div id="js-step-1">
+
+                        <h2 class="text-white">Initialise Mars Rover</h2>
+
+                        <!-- Zone -->
+                        <h3 class="text-white">Zone Boundry</h3>
+
+                        <label class="text-white" for="zone-x">X coordinate</label>
+                        <input id="zone-x" name="zone-x" type="number" title="Coordinate must be a number" />
+                        <br><br>
+                        <label class="text-white" for="zone-y">Y coordinate</label>
+                        <input id="zone-y" name="zone-y" type="number" title="Coordinate must be a number" />
+
+                        <!-- Position -->
+                        <h3 class="text-white">Initialise Rover Position</h3>
+
+                        <label class="text-white" for="position-x">X coordinate</label>
+                        <input id="position-x" name="position-x" type="number" title="Coordinate must be a number" />
+                        <br><br>
+                        <label class="text-white" for="position-y">Y coordinate</label>
+                        <input id="position-y" name="position-y" type="number" title="Coordinate must be a number" />
+                        <br><br>
+                        <label class="text-white" for="direction">Direction (N, E, S, W)</label>
+                        <input id="direction" name="direction" type="text" pattern="[A-Za-z]{1}" title="Direction must be N, E, S, or W" />
+        
+                        <br><br>
+
+                        <button onclick="nextStep()" type="button">
+                            Proceed
+                        </button>
+
+                    </div>
+
+                    <div id="js-step-2">
+
+                        <h2 class="text-white">Move Mars Rover</h2>
+
+                        <!-- Movement -->
+                        <h3 class="text-white">Move Command</h3>
+
+                        <label class="text-white" for="movement">Move (M, R, L)</label>
+                        <input id="movement" name="movement" type="text" pattern="[A-Za-z]" title="Move command must be M, R, or L" />
+        
+                        <br><br>
+
+                        <button onclick="MoveRover()" type="button">
+                            Move
+                        </button>
+
+
+                    </div>
+
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 data-container">
+
+                    <h2 class="text-white">Mars Rover Output</h2>
+
+                    <div class="output-box">
+                        <span>>...</span>
+                        <!-- Output goes here -->
+                    </div>
+    
+                </div>
+            </div>
+            
+
+        </div>
+
+    </main>
+
+    <script src="./scripts.js"></script>
+
+</body>
+
+</html>
