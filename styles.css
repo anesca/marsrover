@@ -87,6 +87,10 @@ button:hover {
     color: #7bd646;
 }
 
+#js-step-2 {
+    display: none;
+}
+
 .output-box {
     border: 2px solid white;
     padding: 10px;
