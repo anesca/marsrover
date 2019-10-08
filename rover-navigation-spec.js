@@ -115,5 +115,24 @@ describe('doMovement', function() {
         };
         expect(roverNavigation.doMovement(input)).to.eql(expected);
 
+        input = {
+            zoneBounds: {
+                x: 12,
+                y: 12,
+            },
+            currentPos: {
+                x: 3,
+                y: 2,
+                d: 'E'
+            },
+            movement: 'MMMLMMLMMM'
+        },
+        expected = {
+            x: 3,
+            y: 4,
+            d: 'W'
+        };
+        expect(roverNavigation.doMovement(input)).to.eql(expected);
+
     });
 });

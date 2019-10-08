@@ -31,7 +31,6 @@ function nextStep() {
         } else {
             initNavigation(zoneX, zoneY, positionX, positionY, direction);
         }
-
         
     });
 
