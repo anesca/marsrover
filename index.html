@@ -50,7 +50,7 @@
         
                         <br><br>
 
-                        <button onclick="nextStep()" type="button">
+                        <button id="js-next-step" type="button">
                             Proceed
                         </button>
 
@@ -68,7 +68,7 @@
         
                         <br><br>
 
-                        <button onclick="MoveRover()" type="button">
+                        <button id="js-move-rover" type="button">
                             Move
                         </button>
 
@@ -81,7 +81,8 @@
 
                     <h2 class="text-white">Mars Rover Output</h2>
 
-                    <div class="output-box">
+                    <div class="output-box"
+                        id="js-output-box">
                         <span>>...</span>
                         <!-- Output goes here -->
                     </div>
@@ -94,7 +95,7 @@
 
     </main>
 
-    <script src="./scripts.js"></script>
+    <script src="./bundle.js"></script>
 
 </body>
 
