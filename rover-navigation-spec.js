@@ -134,5 +134,25 @@ describe('doMovement', function() {
         };
         expect(roverNavigation.doMovement(input)).to.eql(expected);
 
+        // testing the rover going out of bounds
+        input = {
+            zoneBounds: {
+                x: 5,
+                y: 5,
+            },
+            currentPos: {
+                x: 2,
+                y: 1,
+                d: 'E'
+            },
+            movement: 'MMMMRMM'
+        },
+        expected = {
+            x: 5,
+            y: 0,
+            d: 'S'
+        };
+        expect(roverNavigation.doMovement(input)).to.eql(expected);
+
     });
 });
